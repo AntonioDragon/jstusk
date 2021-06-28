@@ -12,38 +12,21 @@ DNAStrand ("ATTGC") // return "TAACG"
 
 DNAStrand ("GTAT") // return "CATA" 
 */
-let DNA ={                                // Создаем список Днк для задания
-    A : 'T',                        
-    T : 'A',
-    G : 'C',
-    C : 'G'
-}
+const DNA_array = [
+    ['A', 'T'],
+    ['T', 'A'],
+    ['G', 'C'],
+    ['C', 'G']
+];
+const DNA = new Map(DNA_array); //создание map через двойной массив    
 
-function DNAStrand(dna){
-    arr = dna.split('');                   //Создаем массив разбивая входящую строку 
-    for(let i = 0; i<arr.length ; i++){    //Проходим по массиву
-        switch(arr[i]){                    //Создаем switch  и проверяем днк
-            case DNA.A : {
-                arr[i] = DNA.T;           // Замена днк A = T
-                break;
-            }
-            case DNA.T : {
-                arr[i] = DNA.A;           // Замена днк T = A
-                break;
-            }
-            case DNA.C : {
-                arr[i] = DNA.G;           // Замена днк C = G
-                break;
-            }
-            case DNA.G : {
-                arr[i] = DNA.C;           // Замена днк G = C
-                break;
-            }
-            default: 
-            return "Данное значение днк не походит : " + arr[i]; //Ошибка отсутсвие значения в списке  
-        }
+
+function DNAStrand(dna) {
+    let arr = dna.split(''); //Создаем массив разбивая входящую строку 
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = DNA.get(arr[i]); //Берем из map DNA нужные значения через ключ
     }
-    return arr.join('');                  // Обьединяем в одну строку
+    return arr.join(''); // Обьединяем в одну строку
 }
 
 console.log(DNAStrand("ATCGC"));

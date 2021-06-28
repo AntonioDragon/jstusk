@@ -19,16 +19,16 @@ songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
   // =>  WE ARE THE CHAMPIONS MY FRIEND
 */
 
-function songDecoder(song){
-    arr =song.split('WUB')                                    //Создаем массив и убираем из строки WUB
-    arrnew = [];                                                
-    for(let i = 0; i<arr.length;i++){                         //Проходим по массиву
-        if(arr[i] !='')                                       //Проверяем на пустой елмент 
-            arrnew.push(arr[i])                               //Не пустые закидуем в новый массив
-    }
-    return arrnew.join(' ');                                  //Массив обьединяем в строку
+function songDecoder(song) {
+  arr = song.split('WUB') //Создаем массив и убираем из строки WUB
+  arrnew = [];
+  for (let i = 0; i < arr.length; i++) { //Проходим по массиву
+    if (arr[i] != '') //Проверяем на пустой елмент 
+      arrnew.push(arr[i]) //Не пустые закидуем в новый массив
+  }
+  return arrnew.join(' '); //Массив обьединяем в строку
 }
 
- str = "WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB";
- str2 = "AWUBBWUBC"
- console.log(songDecoder(str));
+var str = "WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB";
+var str2 = "AWUBBWUBC"
+console.log(songDecoder(str));

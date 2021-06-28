@@ -1,9 +1,7 @@
-function palindrome(pal){
-  str = pal.split('')        //строку разбиваем на массив символов, 
-  .reverse().join('');      //потом переварачиваем, а потом объеденияем в строку 
-  (pal == str)              //сравниваем строки 
-  ? console.log(pal,"it a palindrome")  
-  : console.log(pal,"it not palindrome");
+function palindrome(pal) {
+  let str = pal.split('') //строку разбиваем на массив символов, 
+    .reverse().join(''); //потом переварачиваем, а потом объеденияем в строку 
+  (pal == str) ? console.log(true): console.log(false); //сравниваем строки 
 }
 
 palindrome("stots");

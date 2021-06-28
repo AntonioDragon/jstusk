@@ -7,11 +7,15 @@ If a value is present in b, all of its occurrences must be removed from the othe
 arrayDiff([1,2,2,2,3],[2]) == [1,3]
 */
 function arrayDiff(a, b) {
-    return a.filter(x => !b.includes(x));  // Возвращаем разницу массивов a и b с помощью filter  
-}                                          //в котором указуем все елементы a не совпадающие с b   
+    return a.filter(x => !b.includes(x)); 
+}
+/* 
+Возвращаем разницу массивов a и b с помощью filter  
+в котором указуем все елементы a не совпадающие с b 
+*/  
 
 
-arr1 = [1,2,2,2,3];
-arr2 = [2];
+var arr1 = [1, 2, 2, 2, 3];
+var arr2 = [2];
 
 console.log(arrayDiff(arr1, arr2))
