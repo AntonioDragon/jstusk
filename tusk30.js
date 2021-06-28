@@ -16,12 +16,12 @@ Error checking for text strings or other invalid inputs is not required, only va
 function narcissistic(value) {
     temp = value;    
     let sum = 0;                            
-    temp = temp.toString().split('').map((val,i,arr) => {
-        val = Math.pow(parseInt(val),arr.length);
-        sum+=val;
+    temp = temp.toString().split('').map((val,i,arr) => {  //Создаем массив из цифр
+        val = Math.pow(parseInt(val),arr.length);          //Возводим в степень каждое число , степнь = кол-во цифр в числе
+        sum+=val;                                          //Суммируем
         return val;
     });
-    return value == sum;
+    return value == sum;                                   //Сравниваем сумму с исходным , если true то это число Армстронга
 }
 
 console.log(narcissistic(1652))
